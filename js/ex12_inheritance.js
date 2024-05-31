@@ -1,5 +1,5 @@
 class BasicCalculator{
-    constructor(a,b){
+    constructor(a,b=0){
         this.a =a;
         this.b =b;
     }
@@ -14,7 +14,7 @@ bc.add();
 
 class ScientificCalculator extends BasicCalculator{
     constructor(c){
-        super(c,5); // BasicCalculator(4,5)
+        super(c); // BasicCalculator(4,5)
         this.c = c;
     }
     constructor(c,d){
