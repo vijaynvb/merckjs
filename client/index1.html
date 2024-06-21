@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .red {
+        background-color: yellow;
+        color: red;
+        font-weight: bold;
+        }
+        .green {
+        background-color: yellow;
+        color: green;
+        font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my Website</h1>
+    <input type="text" id="inputTextbox" />
+    <p id="paragraph" >This is a paragraph.</p>
+
+    <button id="mybtn" onclick="clickedMe()">click</button>
+
+    <script>
+        // const btnElement = document.getElementById("mybtn");
+        // btnElement.onclick = clickedMe;
+        
+        function clickedMe(){
+
+            let color = document.getElementById("inputTextbox").value;
+            console.log(color);
+            const pElement = document.getElementById("paragraph");
+            if(color == 'red')
+            {
+                pElement.classList.remove('red','green');
+                pElement.classList.add('red');
+            }
+            else
+            {
+                pElement.classList.remove('red','green');
+                pElement.classList.add('green');
+            }
+        }
+    </script>
+</body>
+</html>
